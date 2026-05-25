@@ -3,15 +3,16 @@
 
 int main()
 {
-    Fraction a(3, 6);
-    Fraction b(5);
-    Fraction c;
-    Fraction d(6, -8);
+    Fraction a(1, 2), b(3, 4), c;
 
-    std::cout << a << "\n";
-    std::cout << b << "\n";
-    std::cout << c << "\n";
-    std::cout << d << "\n";
-
+    c = a + b;
+    
+    std::cout << "a = " << a << "\n";
+    std::cout << "b = " << b << "\n";
+    std::cout << "c = " << c << "\n";
+    
+    c = -a;
+    std::cout << "c = " << c << "\n";
+    
     return 0;
 }

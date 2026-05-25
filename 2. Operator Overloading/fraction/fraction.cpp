@@ -32,6 +32,19 @@ std::string Fraction::to_string() const
         + std::to_string(_denominator);
 }
 
+Fraction Fraction::operator + (const Fraction& other) const
+{
+    int numerator = _numerator * other._denominator
+        + _denominator * other._numerator;
+    int denominator = _denominator * other._denominator;
+    return Fraction(numerator, denominator);
+}
+
+Fraction Fraction::operator - () const
+{
+    return Fraction(- _numerator, _denominator);
+}
+
 std::ostream& operator<<(std::ostream& os, const Fraction& r)
 {
     return os << r.to_string();
