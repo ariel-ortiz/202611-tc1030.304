@@ -10,6 +10,7 @@ public:
     std::string to_string() const;
     Fraction operator + (const Fraction& other) const;
     Fraction operator - () const;
+    Fraction operator - (const Fraction& other) const;
     
 private:
 

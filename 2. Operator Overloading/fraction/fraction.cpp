@@ -45,6 +45,11 @@ Fraction Fraction::operator - () const
     return Fraction(- _numerator, _denominator);
 }
 
+Fraction Fraction::operator - (const Fraction& other) const
+{
+    return *this + -other;
+}
+
 std::ostream& operator<<(std::ostream& os, const Fraction& r)
 {
     return os << r.to_string();
