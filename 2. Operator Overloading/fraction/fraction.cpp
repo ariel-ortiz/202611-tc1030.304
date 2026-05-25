@@ -50,6 +50,22 @@ Fraction Fraction::operator - (const Fraction& other) const
     return *this + -other;
 }
 
+Fraction::operator double() const
+{
+    return static_cast<double>(_numerator) / _denominator;
+}
+
+bool Fraction::operator == (const Fraction& other) const
+{
+    return _numerator == other._numerator
+        and _denominator == other._denominator;
+}
+
+bool Fraction::operator != (const Fraction& other) const
+{
+    return not (*this == other);
+}
+
 std::ostream& operator<<(std::ostream& os, const Fraction& r)
 {
     return os << r.to_string();

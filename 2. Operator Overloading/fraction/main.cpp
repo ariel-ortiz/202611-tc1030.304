@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 #include "fraction.h"
 
 int main()
@@ -16,6 +17,14 @@ int main()
 
     c = a - b;
     std::cout << "c = " << c << "\n";
+
+    std::cout << "static_cast<double>(b) = " << static_cast<double>(b) << "\n";
+
+    std::cout << std::boolalpha;
+    std::cout << "a == b = " << (a == b) << "\n";
+    std::cout << "a == a = " << (a == a) << "\n";
+    std::cout << "a != b = " << (a != b) << "\n";
+    std::cout << "a != a = " << (a != a) << "\n";
 
     return 0;
 }
