@@ -7,6 +7,11 @@
 #include "rectangle.h"
 #include "square.h"
 
+double add_area_and_perimiter(const Figure& f)
+{
+    return f.area() + f.perimeter();
+}
+
 int main()
 {
     Rectangle r(10, 5);
@@ -35,6 +40,9 @@ int main()
         }
     }
     std::cout << "Suma de áreas = " << area_sum << "\n";
+
+    std::cout << add_area_and_perimiter(r) << "\n";
+    std::cout << add_area_and_perimiter(c) << "\n";
 
     return 0;
 }
